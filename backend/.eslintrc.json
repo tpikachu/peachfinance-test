@@ -1,0 +1,28 @@
+{
+  "root": true,
+  "env": {
+    "es6": true,
+    "jest/globals": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "plugin:jest/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "jest"],
+  "rules": {
+    "space-before-function-paren": 0,
+    "quotes": [1, "single", { "allowTemplateLiterals": true }],
+    "no-console": "error",
+    "no-debugger": "error",
+    "no-underscore-dangle": "error"
+  }
+}

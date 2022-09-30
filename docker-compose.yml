@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  api:
+    image: node:16.14.2-alpine3.14
+    working_dir: /app
+    ports:
+      - "4100:4100"
+    volumes:
+      - ./backend:/app
+    command: sh -c "yarn && ./bin/migrate.sh && yarn start"
+  webapp:
+    image: node:16.14.2-alpine3.14
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    command: sh -c "yarn && yarn start"
